@@ -1,23 +1,23 @@
-# Claude Code로 데이터 분석 자동화하기 (B2G)
+# Claude Code 챌린지 (인프런 B2G)
 
 > **사업명**: 2026 중소기업 인재키움프리미엄 훈련
 > **회차**: 4회 (3h × 4) · 비대면 실시간 (Zoom) · 인프런 운영
 > **대상**: SQL/Python으로 데이터 분석하는 중소기업 실무자 (Claude Code는 처음)
 > **메인 데이터**: 서울 미세먼지 (열린데이터광장 OA-2218) + 결합 (따릉이·지하철·날씨·언급량·쇼핑 적재본)
 
-수강생용 공개 자료 모음. 매 회차 종료 후 본인 fork의 `day{n}/` 폴더에 산출물(CLAUDE.md, outputs, notes.md 등)을 push해서 미션 제출.
+이 레포는 **강의용 백업·예시 자료** 모음. 강의 중에는 가능한 한 데이터 포털에서 직접 받는 걸 권장하고, 백업이 필요하거나 로컬에서 빠르게 확인하고 싶을 때만 이 레포를 사용한다. 미션 제출은 **인프런/운영 채널 업로드**.
 
 ---
 
 ## 폴더 구조
 
 ```
-b2g-claude-code-2026/
+inflearn_ccd_challenge/
 ├── README.md                       # 본 문서 (폴더 구조 + 다운로드 안내)
-├── data/                           # 강의에서 쓰는 모든 원본 데이터
+├── data/                           # 강의에서 쓰는 모든 원본 데이터 (백업)
 │   ├── seoul_air_quality/          # 메인 — 미세먼지 (OA-2218)
-│   │   ├── seoul_air_quality_2024.csv
-│   │   └── seoul_air_quality_2025.csv
+│   │   ├── 기간별_일평균_대기환경_정보_2024년.csv
+│   │   └── 기간별_일평균_대기환경_정보_2025년.csv
 │   ├── seoul_districts/            # folium 지도용 GeoJSON
 │   │   └── seoul_districts.geojson
 │   ├── seoul_bike/                 # 따릉이 일별 대여 건수
@@ -30,16 +30,17 @@ b2g-claude-code-2026/
 │       └── README.md               # ※ 강사 사전 배포 예정
 ├── prompts/                        # 회차별 시연·미션 프롬프트 원본
 │   ├── day1_setup_and_first_analysis.md
-│   └── day2_eda_and_join.md
+│   ├── day2_eda_and_join.md
+│   └── eda_question_bank.md        # EDA 분석 질문 50개 뱅크
 ├── ppt/                            # 회차별 슬라이드 (수강생 배포본)
 │   ├── b2g_day1_setup.pptx
 │   └── b2g_day2_eda.pptx
-├── day1/                           # 1일차 산출물 템플릿
-│   ├── CLAUDE.md                   # 프로젝트 컨텍스트 메모 (1일차 버전)
-│   ├── outputs/                    # 차트 PNG 등
-│   └── notes.md                    # "평소 같으면 얼마나 걸렸을까?" 한 줄 소감
-└── day2/                           # 2일차 산출물 템플릿
-    ├── CLAUDE.md                   # 1일차 그대로 복사 + 누적 규칙 반영
+├── day1/                           # 1일차 산출물 템플릿 (참고용)
+│   ├── CLAUDE.md                   # 프로젝트 컨텍스트 메모
+│   ├── outputs/
+│   └── notes.md
+└── day2/                           # 2일차 산출물 템플릿 (참고용)
+    ├── CLAUDE.md                   # 1일차 + 누적 규칙 반영
     ├── outputs/
     └── notes.md
 ```
@@ -61,7 +62,7 @@ b2g-claude-code-2026/
 | 컬럼 9개 | 측정일시, 권역명, 측정소명, 이산화질소(ppm), 오존(ppm), 일산화탄소(ppm), 아황산가스(ppm), 미세먼지(㎍/㎥), 초미세먼지(㎍/㎥) |
 | 컬럼명 통일 | 2024 "미세먼지/초미세먼지" → 2025 "미세먼지농도/초미세먼지농도" 와 일치하도록 분석 시 통일 |
 
-CSV는 `data/seoul_air_quality/`에 강사 백업본이 있다. 강의 시간엔 위 페이지에서 직접 다운로드를 권장.
+CSV는 `data/seoul_air_quality/`에 강사 백업본이 있다. 강의 시간엔 위 페이지에서 **직접 다운로드**를 권장.
 
 ---
 
@@ -69,20 +70,23 @@ CSV는 `data/seoul_air_quality/`에 강사 백업본이 있다. 강의 시간엔
 
 | 회차 | 주제 | 미션 |
 |---|---|---|
-| Day 1 (5/12) | 환경 세팅 + 데이터 가져오기 | 질문 3개 + 결과 캡처 + CLAUDE.md → `day1/` 푸시 |
-| Day 2 (5/14) | EDA + 결합 데이터 | 질문 5개 (단독 3 + 결합 2) + Colab + CLAUDE.md 누적 → `day2/` 푸시 |
+| Day 1 (5/12) | 환경 세팅 + 데이터 가져오기 | 질문 3개 + 결과 캡처 + CLAUDE.md → 인프런/운영 채널 업로드 |
+| Day 2 (5/14) | EDA + 결합 데이터 | 질문 5개 (단독 3 + 결합 2) + Colab + CLAUDE.md 누적 → 인프런/운영 채널 업로드 |
 | Day 3 (5/19) | 대시보드 만들기 (HTML + Streamlit) | TBD |
 | Day 4 (5/21) | Skills + 결합 분석 + 의사결정 리포트 | TBD |
 
 ---
 
-## 사용 방법
+## 작업 폴더 + 미션 제출 동선
 
-1. 본인 GitHub로 이 레포를 **Fork** (또는 clone)
-2. Claude Desktop 앱에서 자연어로 Claude Code 설치 요청 (Day 1 PPT 참조)
-3. 본인 작업 폴더에서 `claude` 실행 → 데이터·CLAUDE.md를 작업 폴더에 배치
-4. 각 회차 끝나면 본인 fork의 해당 `day{n}/` 폴더에 산출물 push
-5. push한 PR 또는 본인 fork 링크를 강의 채널에 공유 → 미션 제출 완료
+1. **Claude Desktop App** 설치 + Pro/Max 로그인 (https://claude.ai/download)
+2. 바탕화면에 **`inflearn_ccd_challenge`** 라는 작업 폴더 생성
+3. Claude Desktop의 **"Code"** 메뉴에서 위 폴더 지정 → Claude Code 자동 설치
+4. 터미널에서 `claude` 첫 실행 → Anthropic 계정 인증
+5. 강의 따라가면서 데이터·CLAUDE.md·산출물을 작업 폴더에 누적
+6. 미션 제출 → 산출물(PNG · CLAUDE.md · notebook 등)을 **인프런/운영 채널에 업로드**
+
+> 데이터·PPT·프롬프트는 가능한 한 출처에서 직접 받는 걸 권장. 못 받았거나 비교가 필요할 때만 이 레포의 백업본 사용.
 
 ---
 

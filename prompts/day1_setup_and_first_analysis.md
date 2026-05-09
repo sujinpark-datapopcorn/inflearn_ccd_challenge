@@ -6,20 +6,23 @@
 
 ## 환경 세팅 (Claude Desktop 앱에서)
 
-### 자연어로 Claude Code 설치 요청
-```
-내 노트북에 Claude Code를 설치하고 싶어.
-필요한 사전 준비(Node.js 등)도 같이 해줘.
-설치가 끝나면 터미널에서 claude 명령어가 실행되는지 확인해줘.
-운영체제는 [Mac / Windows] 야.
-```
+### 1단계 — Claude Desktop App 설치
+- https://claude.ai/download 에서 본인 OS용 다운로드 → 설치 → 실행
+- Pro/Max 계정으로 로그인
+- 좌측 사이드바에 **"Code"** 항목이 보이는지 확인
 
-### 작업 폴더 만들고 첫 실행
-```
-바탕화면에 b2g-air-quality 라는 폴더 만들고,
-그 폴더에서 claude 명령어를 실행해줘.
-첫 실행이면 인증도 같이 진행해줘.
-```
+### 2단계 — 바탕화면에 작업 폴더 만들기
+- 폴더 이름: **`inflearn_ccd_challenge`** (강의용 통일)
+- 위치: 바탕화면
+
+### 3단계 — Claude Desktop에서 Claude Code 설치
+- Claude Desktop 좌측 메뉴 **"Code"** 클릭
+- 작업 폴더로 `inflearn_ccd_challenge` 지정
+- 앱 안내에 따라 Claude Code 설치 진행 (Node.js 등 자동)
+
+### 4단계 — claude 첫 실행 + 인증
+- 터미널에서 `claude` 명령어 실행
+- 브라우저로 Anthropic 계정 인증 1회 (Pro/Max 로그인 상태)
 
 ---
 
@@ -27,7 +30,7 @@
 
 ### 시연용 (Before/After 데모)
 ```
-이 폴더에 seoul_air_quality_2024.csv + seoul_air_quality_2025.csv 있어.
+이 폴더에 기간별_일평균_대기환경_정보_2024년.csv + 기간별_일평균_대기환경_정보_2025년.csv 있어.
 두 파일 모두 인코딩은 CP949(EUC-KR 호환)야. 통합해서 자치구별 PM2.5 연평균을
 2024 vs 2025 비교 막대그래프로, 한글 폰트 깨지지 않게 그려줘.
 ```
@@ -38,7 +41,7 @@
 
 ### 2단계 — 데이터 요약 받기
 ```
-이 폴더의 seoul_air_quality_2024.csv 와 seoul_air_quality_2025.csv 둘 다 읽어서
+이 폴더의 기간별_일평균_대기환경_정보_2024년.csv 와 기간별_일평균_대기환경_정보_2025년.csv 둘 다 읽어서
 어떤 데이터인지 요약해줘. 둘 다 인코딩은 CP949야.
 원본 9개 컬럼(측정일시, 권역명, 측정소명, 이산화질소·오존·일산화탄소·
 아황산가스·미세먼지·초미세먼지) 그대로 보여주고,
@@ -74,5 +77,5 @@ yoy_monthly_pm25.png 로 저장.
 
 1. 본인이 던진 질문 3개 + 결과 캡처 (PNG)
 2. CLAUDE.md (분석 규칙 5개 이상)
-3. (선택) "평소 같으면 얼마나 걸렸을까?" 한 줄 소감 — `notes.md`
-4. 본인 fork의 `day1/` 폴더에 push → 링크 공유
+3. (선택) "평소 같으면 얼마나 걸렸을까?" 한 줄 소감
+4. 산출물(PNG · CLAUDE.md)을 **인프런/운영 채널에 업로드**
