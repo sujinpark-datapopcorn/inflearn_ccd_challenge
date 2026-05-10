@@ -70,16 +70,25 @@ inflearn_ccd_challenge/
 
 ---
 
-## 작업 폴더 + 미션 제출 동선
+## 작업 폴더 셋업
 
 1. **Claude Desktop App** 설치 + Pro/Max 로그인 (https://claude.ai/download)
 2. 바탕화면에 **`inflearn_ccd_challenge`** 라는 작업 폴더 생성
 3. Claude Desktop의 **"Code"** 메뉴에서 위 폴더 지정 → Claude Code 자동 설치
 4. 터미널에서 `claude` 첫 실행 → Anthropic 계정 인증
 5. 강의 따라가면서 데이터·CLAUDE.md·산출물을 작업 폴더에 누적
-6. 미션 제출 → 산출물(PNG · CLAUDE.md · notebook 등)을 **인프런에 업로드**
 
 > **원칙: 데이터는 출처에서 직접 다운로드** — 각 데이터 폴더의 README에 출처 링크가 있다. 받기 어려운 경우(시간·계정·플랫폼 이슈)에만 백업본 사용.
+
+---
+
+## 미션 제출
+
+- 매 회차 끝나면 산출물을 **인프런에 업로드** (다음 회차 시작 전까지)
+- 제출물 (회차별 차이 있음)
+  - 결과 PNG · CLAUDE.md
+  - Day 2부터 Colab notebook 추가
+- 자세한 회차별 미션은 PPT 미션 슬라이드 참고
 
 ---
 
