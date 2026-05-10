@@ -1,6 +1,6 @@
-# Day 2 — 시연 + 미션 프롬프트 모음
+# Day 2 — 프롬프트 모음
 
-> 강의 시연용 프롬프트 원본. 분석 질문 50개 전체 리스트는 `prompts/eda_question_bank.md` 참고.
+> 강의에서 함께 쓰는 프롬프트 원본. 분석 질문 50개 전체 리스트는 `prompts/eda_question_bank.md` 참고.
 
 ---
 

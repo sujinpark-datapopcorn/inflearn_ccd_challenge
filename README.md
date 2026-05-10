@@ -21,12 +21,13 @@ inflearn_ccd_challenge/
 │   ├── seoul_subway/               # 지하철 일별 총 승하차 + README
 │   ├── weather/                    # 기상청 ASOS 서울 일자료 (Day 2 결합) + README
 │   └── buzz/                       # 검색량/언급량 (네이버 데이터랩·구글 트렌드) + README
-├── prompts/                        # 회차별 시연·미션 프롬프트 원본
+├── prompts/                        # 회차별 프롬프트 모음 + 분석 질문 뱅크
 │   ├── day1_setup_and_first_analysis.md
 │   ├── day2_eda_and_join.md
-│   └── eda_question_bank.md        # EDA 분석 질문 50개 뱅크
-├── notebooks/                      # Colab 시연 노트북
-│   └── b2g_day2_eda.ipynb          # Day 2 EDA + 결합 분석 흐름
+│   └── eda_question_bank.md        # EDA 분석 질문 50개
+├── notebooks/                      # Colab 노트북
+│   ├── b2g_day2_eda_questions.ipynb   # Day 2 — 50개 질문 풀이 자리 (수강생용)
+│   └── b2g_day2_eda_solutions.ipynb   # Day 2 — 50개 질문 답안 (확인용)
 ├── day1/                           # 1일차 산출물 템플릿 (참고용)
 │   ├── CLAUDE.md                   # 프로젝트 컨텍스트 메모
 │   ├── outputs/
