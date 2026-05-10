@@ -8,3 +8,6 @@ node_modules/
 # 슬라이드 마스터(.pptx/.key)는 레포에 올리지 않음 — 강사가 PDF로 별도 공유
 ppt/*.pptx
 ppt/*.key
+
+# raw 데이터(광장에서 직접 받기) — 1.4GB 너무 커서 push X
+data/seoul_bike/raw_2024/
