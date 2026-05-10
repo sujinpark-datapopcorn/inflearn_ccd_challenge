@@ -24,10 +24,10 @@ inflearn_ccd_challenge/
 ├── prompts/                        # 회차별 프롬프트 모음 + 분석 질문 뱅크
 │   ├── day1_setup_and_first_analysis.md
 │   ├── day2_eda_and_join.md
-│   └── eda_question_bank.md        # EDA 분석 질문 50개
+│   └── eda_question_bank.md        # EDA 분석 질문 42개
 ├── notebooks/                      # Colab 노트북
-│   ├── b2g_day2_eda_questions.ipynb   # Day 2 — 50개 질문 풀이 자리 (수강생용)
-│   └── b2g_day2_eda_solutions.ipynb   # Day 2 — 50개 질문 답안 (확인용)
+│   ├── b2g_day2_eda_questions.ipynb   # Day 2 — 42개 질문 풀이 자리 (수강생용)
+│   └── b2g_day2_eda_solutions.ipynb   # Day 2 — 42개 질문 답안 (확인용)
 ├── day1/                           # 1일차 산출물 템플릿 (참고용)
 │   ├── CLAUDE.md                   # 프로젝트 컨텍스트 메모
 │   ├── outputs/
