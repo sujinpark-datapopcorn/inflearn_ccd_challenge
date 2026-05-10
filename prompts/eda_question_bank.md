@@ -115,4 +115,6 @@
 - **단독 → 결합으로 한 번 확장** — 같은 주제 단독 질문에서 시작해 결합 데이터로 깊이를 더하기
 - **반복되는 패턴은 CLAUDE.md에 누적** — "이 규칙 추가해줘"로 자연어 한 마디면 끝
 
-같은 50개 질문을 코드로 풀어둔 Colab 노트북: `notebooks/b2g_day2_eda.ipynb`
+같은 42개 질문을 코드로 풀어둔 Colab 노트북:
+- `notebooks/b2g_day2_eda_questions.ipynb` — 빈 셀 (본인이 던진 답을 붙이는 자리)
+- `notebooks/b2g_day2_eda_solutions.ipynb` — Claude가 답한 분석 모음
