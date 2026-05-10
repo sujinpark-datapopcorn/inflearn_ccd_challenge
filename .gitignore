@@ -4,3 +4,7 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 node_modules/
+
+# 슬라이드 마스터(.pptx/.key)는 레포에 올리지 않음 — 강사가 PDF로 별도 공유
+ppt/*.pptx
+ppt/*.key
