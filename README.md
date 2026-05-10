@@ -25,6 +25,8 @@ inflearn_ccd_challenge/
 │   ├── day1_setup_and_first_analysis.md
 │   ├── day2_eda_and_join.md
 │   └── eda_question_bank.md        # EDA 분석 질문 50개 뱅크
+├── notebooks/                      # Colab 시연 노트북
+│   └── b2g_day2_eda.ipynb          # Day 2 EDA + 결합 분석 흐름
 ├── day1/                           # 1일차 산출물 템플릿 (참고용)
 │   ├── CLAUDE.md                   # 프로젝트 컨텍스트 메모
 │   ├── outputs/
