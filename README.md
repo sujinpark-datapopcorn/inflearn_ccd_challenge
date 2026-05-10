@@ -25,8 +25,6 @@ inflearn_ccd_challenge/
 │   ├── day1_setup_and_first_analysis.md
 │   ├── day2_eda_and_join.md
 │   └── eda_question_bank.md        # EDA 분석 질문 50개 뱅크
-├── ppt/                            # 회차별 슬라이드 (PDF만 — PPT는 레포에 안 올림)
-│   └── README.md                   # 강사가 최종 수정 후 PDF 업로드
 ├── day1/                           # 1일차 산출물 템플릿 (참고용)
 │   ├── CLAUDE.md                   # 프로젝트 컨텍스트 메모
 │   ├── outputs/
